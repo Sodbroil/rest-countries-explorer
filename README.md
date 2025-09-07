@@ -1,69 +1,115 @@
-# React + TypeScript + Vite
+# 🌍 CountryHub - Explore the World
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![CI Pipeline](https://github.com/Sodbroil/rest-countries-explorer/actions/workflows/ci.yml/badge.svg)](https://github.com/Sodbroil/rest-countries-explorer/actions/workflows/ci.yml)
+[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://rest-countries-explorer.vercel.app)
+[![Test Coverage](https://img.shields.io/badge/Coverage-78%25-brightgreen)](https://github.com/Sodbroil/rest-countries-explorer/actions)
 
-Currently, two official plugins are available:
+A modern React application for exploring countries around the world with beautiful UI and advanced filtering capabilities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+👉 **[https://rest-countries-explorer.vercel.app](https://rest-countries-explorer.vercel.app)**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **🌍 Explore All Countries** - Browse through 250+ countries
+- **🔍 Smart Search** - Find countries by name
+- **📍 Filter by Region** - Explore by continent
+- **📱 Responsive Design** - Works on desktop and mobile
+- **🎨 Modern UI** - Built with Tailwind CSS
+- **⚡ Fast Performance** - Powered by Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Frontend:** React 18 + TypeScript
+- **Styling:** Tailwind CSS
+- **Build Tool:** Vite
+- **Testing:** Vitest + Testing Library
+- **API:** REST Countries API
+- **Deployment:** Vercel
+- **CI/CD:** GitHub Actions
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Sodbroil/rest-countries-explorer.git
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧪 Testing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Run all tests
+npm test
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Run tests with coverage
+npm run test:coverage
+
+# Run specific test files
+npm test src/__tests__/services/countryService.test.ts
 ```
+
+### Test Coverage
+
+-   **Components:** 100% ✅
+-   **Store:** 100% ✅
+-   **Pages:** 100% ✅
+-   **Services:** 73% ⚡
+-   **Overall:** 78% 🎯
+    
+
+## 🏗 Project Structure
+
+```bash
+src/
+├── components/          # React components
+│   ├── CountryCard.tsx
+│   └── CountryList.tsx
+├── pages/              # Page components
+│   └── HomePage.tsx
+├── services/           # API services
+│   └── countryService.ts
+├── store/              # State management
+│   └── countryStore.ts
+├── __tests__/          # Test files
+└── App.tsx             # Main app component
+```
+
+## 🔧 API Usage
+
+Uses the [REST Countries API](https://restcountries.com/) with the following endpoints:
+
+```bash
+-   `GET /all` - Get all countries
+-   `GET /alpha/{code}` - Get country by code
+-   `GET /name/{name}` - Search countries by name
+-   `GET /region/{region}` - Filter by region
+```
+
+## 🤝 Contributing
+
+1.  Fork the project
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+    
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://license/) file for details.
+
+## 👨‍💻 Author
+
+**Sodbroil** - [GitHub](https://github.com/Sodbroil)
